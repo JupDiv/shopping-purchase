@@ -11,5 +11,5 @@ const App: React.FC = () => {
   });
   return <div>Hello World</div>;
 };
-
+// Path: src/utils/getDatafromApi.ts
 export default App;
