@@ -29,8 +29,12 @@ export const BasketSlice = createSlice({
   initialState,
   reducers: {
     set: (state, action: PayloadAction<ProductType[]>) => {
-      console.log(action.payload);
-      state.products = state.products.concat(action.payload);
+      console.log('action.payload', action.payload);
+      console.log('state', state);
+      // state.products = action.payload;
+      action.payload.forEach((prod: ProductType) => {
+        state.products.push(prod);
+      });
     },
     add: (state, action: PayloadAction<ProductType>) => {
       const newState: BasketState = { ...state };
@@ -43,18 +47,21 @@ export const BasketSlice = createSlice({
       newState.products.filter((prod) => prod.id !== action.payload.id);
       return newState;
     },
-    // count: (state) => {
-    //   const totalPrice = state.products.reduce((acc, prod) => {
-    //     acc += prod.price;
-    //     return acc;
-    //   }, 0);
-    //   const newState = { ...state };
-    //   newState.totalPrice = totalPrice;
-    //   return newState;
-    // },
   },
 });
 
-export const { add, remove } = BasketSlice.actions;
+export const { set, add, remove } = BasketSlice.actions;
 
 export default BasketSlice.reducer;
+
+/*
+    count: (state) => {
+      const totalPrice = state.products.reduce((acc, prod) => {
+        acc += prod.price;
+        return acc;
+      }, 0);
+      const newState = { ...state };
+      newState.
+      return newState;
+    },
+*/

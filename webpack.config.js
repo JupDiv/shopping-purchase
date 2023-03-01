@@ -44,7 +44,10 @@ module.exports = (env, argv) => {
     ],
     devServer: {
       historyApiFallback: true,
-      open: true,
+      open: {
+        target: 'http://localhost:8080',
+        app: { name: 'google-chrome' },
+      },
       hot: true,
       port: 8080,
     },
