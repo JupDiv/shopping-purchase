@@ -13,8 +13,21 @@ const App: React.FC = () => {
       dispatch(set(resp));
     });
   }, []);
-  console.log(products);
-  return <div>Hello World</div>;
+
+  return (
+    <div>
+      <ul>
+        {products.map((product) => (
+          <li key={product.id}>
+            <h3>{product.title}</h3>
+            <p>{product.description}</p>
+            <p>{product.price}</p>
+            <img src={product.image} alt="clothes picture" />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default App;
