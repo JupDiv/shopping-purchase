@@ -9,7 +9,7 @@ export interface ProductType {
   category: string;
   image: string;
   price: number;
-  raiting: {
+  rating: {
     rate: number;
     count: number;
   };
@@ -31,7 +31,6 @@ export const BasketSlice = createSlice({
     set: (state, action: PayloadAction<ProductType[]>) => {
       console.log('action.payload', action.payload);
       console.log('state', state);
-      // state.products = action.payload;
       action.payload.forEach((prod: ProductType) => {
         state.products.push(prod);
       });
