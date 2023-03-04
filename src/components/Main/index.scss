@@ -1,0 +1,9 @@
+.block-products {
+  width: 1140px;
+  margin: 0 auto;
+  &__list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,12 @@
+.slide {
+  width: 100%;
+  margin: auto;
+  &__image {
+    display: block;
+    background-image: url(../../assets/1.png);
+    margin: auto;
+    width: 800px;
+    height: 400px;
+    background-size: cover;
+  }
+}

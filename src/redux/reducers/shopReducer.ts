@@ -1,24 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { PayloadAction } from '@reduxjs/toolkit';
-import { getDataFromAPI } from '../../utils/getDatafromApi';
-import { useAppDispatch } from '../../utils/hooks';
-
-export interface ProductType {
-  description: string;
-  id: number;
-  category: string;
-  image: string;
-  price: number;
-  rating: {
-    rate: number;
-    count: number;
-  };
-  title: string;
-}
-
-type BasketState = {
-  products: ProductType[];
-};
+import { ProductType, BasketState } from '../../types/commonTypes';
 
 const initialState: BasketState = {
   products: [],
