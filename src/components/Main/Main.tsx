@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { useAppSelector } from '../../utils/hooks';
 import Product from '../Product/Product';
 import { BasketState, ProductProps } from '../../types/commonTypes';
