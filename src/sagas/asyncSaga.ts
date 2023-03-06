@@ -1,5 +1,5 @@
 import { put, all, call } from 'redux-saga/effects';
-import { set } from './../redux/reducers/shopReducer';
+import { set } from '../redux/reducers/shopReducer';
 import { getDataFromAPI } from '../utils/getDatafromApi';
 import type { ProductType } from '../types/commonTypes';
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
-    "start": "webpack serve --mode=development --devtool eval-source-map"
+    "start": "webpack serve --mode=development --devtool eval-source-map "
   },
   "author": "Hlib Laskin",
   "license": "ISC",

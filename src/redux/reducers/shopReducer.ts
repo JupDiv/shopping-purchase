@@ -11,8 +11,6 @@ export const BasketSlice = createSlice({
   initialState,
   reducers: {
     set: (state, action: PayloadAction<ProductType[]>) => {
-      // console.log('action.payload', action.payload);
-      // console.log('state', state);
       action.payload.forEach((prod: ProductType) => {
         state.products.push(prod);
       });

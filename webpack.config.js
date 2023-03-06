@@ -45,8 +45,11 @@ module.exports = (env, argv) => {
     devServer: {
       historyApiFallback: true,
       open: {
-        target: 'http://localhost:8080',
-        app: { name: 'google-chrome' },
+        target: 'http://localhost:8080/',
+        app: {
+          name: 'Google Chrome',
+          arguments: ['--incognito', '--new-window'],
+        },
       },
       hot: true,
       port: 8080,

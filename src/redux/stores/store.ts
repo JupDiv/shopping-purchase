@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
 import BasketSlice from '../reducers/shopReducer';
-import rootSaga from '../../sagas/ourSaga';
+import rootSaga from '../../sagas/asyncSaga';
 
 const sagaMiddleware = createSagaMiddleware();
 const middleware = [sagaMiddleware];
